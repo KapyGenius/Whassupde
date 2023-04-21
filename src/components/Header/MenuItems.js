@@ -73,15 +73,54 @@ const MenuItems = (props) => {
                     </li>
                 </ul>
             </li>
+            <li className={location.pathname === '/about' ? 'menu-active' : ''}>
+                        <Link to="/about">About</Link>
+                    </li>
+           
+
+            <li className={parentMenu === 'course' ? 'has-sub menu-active' : 'has-sub'}>
+                <span className="arrow "></span>
+                <Link to="#" className={course ? "hash menu-active" : "hash"} onClick={() => { openMobileMenu('course'); }}>
+                    General informations
+                    <span className="arrow "></span>
+                </Link>
+                <ul className={course ? "sub-menu sub-menu-open" : "sub-menu"}>
+                    <li className={location.pathname === "/course" ? "menu-active" : ""}>
+                        <Link to="/course">Course</Link>
+                    </li>
+                    <li className={location.pathname === "/course-sidebar" ? "menu-active" : ""}>
+                        <Link to="/course-sidebar">Right Sidebar</Link>
+                    </li>
+                    <li className={location.pathname === "/course-list" ? "menu-active" : ""}>
+                        <Link to="/course-list">Courses List</Link>
+                    </li>
+                    <li className={postURL[1] === "course" && pathLength > 2 ? "menu-active" : ""}>
+                        <Link to="/course/1">Course Single</Link>
+                    </li>
+                </ul>
+            </li>
+           
+
+            <li className={parentMenu === 'blog' ? 'has-sub menu-active' : 'has-sub'}>
+                <Link to="#" className={blog ? "hash menu-active" : "hash"} onClick={() => { openMobileMenu('blog'); }}>
+                    Blog
+                    <span className="arrow "></span>
+                </Link>
+                <ul className={blog ? "sub-menu sub-menu-open" : "sub-menu"}>
+                    <li className={location.pathname === "/blog" ? "menu-active" : ""}>
+                        <Link to="/blog">Blog</Link>
+                    </li>
+                    <li className={postURL[1] === "blog" && pathLength > 2 ? "menu-active" : ""}>
+                        <Link to="/blog/1">Blog Single</Link>
+                    </li>
+                </ul>
+            </li>
             <li className={parentMenu === 'page' || parentMenu === 'event'  ? 'has-sub menu-active' : 'has-sub'}>
                 <Link to="#" className={ page ? "hash menu-active" : "hash"} onClick={() => { openMobileMenu('page'); }}>
-                    Pages
+                    Plus
                     <span className="arrow "></span>
                 </Link>
                 <ul className={page ? "sub-menu sub-menu-open" : "sub-menu"}>
-                    <li className={location.pathname === '/about' ? 'menu-active' : ''}>
-                        <Link to="/about">About</Link>
-                    </li>
                     <li className={location.pathname === "/instructor" ? "menu-active" : ""}>
                         <Link to="/instructor">Instructor</Link>
                     </li>
@@ -106,44 +145,15 @@ const MenuItems = (props) => {
                             <li className={postURL[1] === "event" && pathLength > 2 ? "menu-active" : ""}>
                                 <Link to="/event/1">Event Single</Link>
                             </li>
+                            
                         </ul>
+                        
                     </li>
-                </ul>
-            </li>
-
-            <li className={parentMenu === 'course' ? 'has-sub menu-active' : 'has-sub'}>
-                <span className="arrow "></span>
-                <Link to="#" className={course ? "hash menu-active" : "hash"} onClick={() => { openMobileMenu('course'); }}>
-                    Courses
-                    <span className="arrow "></span>
-                </Link>
-                <ul className={course ? "sub-menu sub-menu-open" : "sub-menu"}>
-                    <li className={location.pathname === "/course" ? "menu-active" : ""}>
-                        <Link to="/course">Course</Link>
+                    <li className={location.pathname === "/faq" ? "menu-active" : ""}>
+                        <Link to="/faq">Faq</Link>
                     </li>
-                    <li className={location.pathname === "/course-sidebar" ? "menu-active" : ""}>
-                        <Link to="/course-sidebar">Right Sidebar</Link>
-                    </li>
-                    <li className={location.pathname === "/course-list" ? "menu-active" : ""}>
-                        <Link to="/course-list">Courses List</Link>
-                    </li>
-                    <li className={postURL[1] === "course" && pathLength > 2 ? "menu-active" : ""}>
-                        <Link to="/course/1">Course Single</Link>
-                    </li>
-                </ul>
-            </li>
-
-            <li className={parentMenu === 'blog' ? 'has-sub menu-active' : 'has-sub'}>
-                <Link to="#" className={blog ? "hash menu-active" : "hash"} onClick={() => { openMobileMenu('blog'); }}>
-                    Blog
-                    <span className="arrow "></span>
-                </Link>
-                <ul className={blog ? "sub-menu sub-menu-open" : "sub-menu"}>
-                    <li className={location.pathname === "/blog" ? "menu-active" : ""}>
-                        <Link to="/blog">Blog</Link>
-                    </li>
-                    <li className={postURL[1] === "blog" && pathLength > 2 ? "menu-active" : ""}>
-                        <Link to="/blog/1">Blog Single</Link>
+                    <li className={location.pathname === "/article" ? "menu-active" : ""}>
+                        <Link to="/article">Articles</Link>
                     </li>
                 </ul>
             </li>

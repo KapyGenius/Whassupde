@@ -74,10 +74,10 @@ const Header = (props) => {
 											{
 												isVisible ? 
 												<Link to="/" className="logo-text">
-													<img src={headerStickyLogo ? headerStickyLogo : stickyLogo} alt="" />
+													<img src={headerStickyLogo ? headerStickyLogo : stickyLogo} alt="logo"  width={170} height={20}/>
 												</Link> :
 												<Link to="/" className="logo-text">
-													<img src={headerNormalLogo ? headerNormalLogo : normalLogo} alt="" />
+													<img src={headerNormalLogo ? headerNormalLogo : normalLogo} alt="logo" width={170}/>
 												</Link>
 											}
 										</div>
@@ -108,14 +108,14 @@ const Header = (props) => {
 												parentMenu = {parentMenu}
 											/>
 										</ul>                                
-										<div className="searchbar-part"> 
+										{/* <div className="searchbar-part"> 
 											<form className="search-form">
 												<input type="text" className="form-input" placeholder="Search Course" />
 												<Link to="/course" className="form-button">
 													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
 												</Link>
 											</form>
-										</div>
+										</div> */}
 									</div>
 								</nav>
 							</div>

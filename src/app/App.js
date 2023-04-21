@@ -20,6 +20,8 @@ import EventDetails from '../pages/event/event-details';
 import Blog from '../pages/blog';
 import BlogDetails from '../pages/blog/blog-details';
 import Login from '../pages/authentication/login';
+import Faq from '../pages/faq/';
+import Services from '../pages/services/';
 import Signup from '../pages/authentication/signup';
 import Contact from '../pages/contact';
 import Error from '../pages/404';
@@ -59,7 +61,8 @@ const App = () => {
                     <Route path="/instructor" exact element={<Instructor />} />
                     <Route path="/instructor/:id" exact element={<InstructorDetails />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/faq" element={<Faq />} />
+                    <Route path="/services" element={<Services />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path='*' element={<Error />} />
                 </Routes>
