@@ -83,14 +83,30 @@ const MenuItems = (props) => {
                     <span className="arrow "></span>
                 </Link>
                 <ul className={course ? "sub-menu sub-menu-open" : "sub-menu"}>
-                    <li className={location.pathname === "/course" ? "menu-active" : ""}>
+                    <li className={parentMenu === 'course' ? 'has-sub menu-active' : 'has-sub'}>
                         <Link to="/course">Etudes</Link>
+                        <ul className={event ? "sub-menu sub-menu-open" : "sub-menu"}>
+                            <li className={location.pathname === "/event" ? "menu-active" : ""}>
+                                <Link to="/event">Pourquoi Etudier en Allemagne</Link>
+                            </li>
+                            <li className={location.pathname === "/event-sidebar" ? "menu-active" : ""}>
+                                <Link to="/event-sidebar">Comment Etudier en Allemagne</Link>
+                            </li>
+                        </ul>
                     </li>
                     <li className={location.pathname === "/course-sidebar" ? "menu-active" : ""}>
                         <Link to="/course-sidebar">Formation(dto.)</Link>
                     </li>
-                    <li className={location.pathname === "/course-list" ? "menu-active" : ""}>
+                    <li className={parentMenu === 'course' ? 'has-sub menu-active' : 'has-sub'}>
                         <Link to="/course-list">Travail/job</Link>
+                        <ul className={event ? "sub-menu sub-menu-open" : "sub-menu"}>
+                            <li className={location.pathname === "/event" ? "menu-active" : ""}>
+                                <Link to="/event">Jobs Etudiant</Link>
+                            </li>
+                            <li className={location.pathname === "/event-sidebar" ? "menu-active" : ""}>
+                                <Link to="/event-sidebar">Travail</Link>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>

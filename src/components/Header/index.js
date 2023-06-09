@@ -66,7 +66,7 @@ const Header = (props) => {
 						</div> : ''
 					}
 					<div className="menu-part">
-						<div className="container">
+						<div className="container" style={{width: "90%"}}>
 							<div className="react-main-menu">
 								<nav>
 									<div className="menu-toggle">
@@ -74,10 +74,10 @@ const Header = (props) => {
 											{
 												isVisible ? 
 												<Link to="/" className="logo-text">
-													<img src={headerStickyLogo ? headerStickyLogo : stickyLogo} alt="logo"  width={170} height={20}/>
+													<img src={headerStickyLogo ? headerStickyLogo : stickyLogo} alt="logo"  width={220} height={20}/>
 												</Link> :
 												<Link to="/" className="logo-text">
-													<img src={headerNormalLogo ? headerNormalLogo : normalLogo} alt="logo" width={170}/>
+													<img src={headerNormalLogo ? headerNormalLogo : normalLogo} alt="logo" width={220}/>
 												</Link>
 											}
 										</div>
